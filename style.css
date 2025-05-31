@@ -1,0 +1,905 @@
+        @font-face {
+            font-family: Nueue;
+            src: url(./NeueHaasDisplayMediu.ttf);
+        }
+        
+        @font-face {
+            font-family: lightNueue;
+            font-weight: 100;
+            src: url(./NeueHaasDisplayLight.ttf);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Nueue;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+        
+        #main {
+            /* background-color: #000; */
+            position: relative;
+            z-index: 10;
+        }
+        
+        #page1 {
+            min-height: 100vh;
+            width: 100%;
+            background-color: #efeae3;
+            position: relative;
+            padding: 0 2vw;
+        }
+        
+        nav {
+            padding: 2vw 0vw;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 100;
+            justify-content: space-between;
+            /* ....> original walla mai dono h */
+        }
+        /* Header Mai jo black style hover ho rha h */
+        
+        #nav-part2 {
+            display: flex;
+            align-items: center;
+            gap: 1vw;
+        }
+        
+        #nav-part2 h4 {
+            padding: 10px 20px;
+            border: 1px solid #8a8a8a89;
+            border-radius: 50px;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.726);
+            transition: all ease 0.3s;
+            position: relative;
+            font-size: 18px;
+            overflow: hidden;
+        }
+        
+        #nav-part2 h4::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            left: 0;
+            bottom: -100%;
+            border-radius: 50%;
+            transition: all ease 0.3s;
+        }
+        
+        #nav-part2 h4:hover::after {
+            bottom: 0;
+            border-radius: 0;
+        }
+        
+        #nav-part2 h4 a {
+            color: rgba(0, 0, 0, 0.726);
+            text-decoration: none;
+            position: relative;
+            z-index: 9;
+        }
+        
+        #nav-part2 h4:hover a {
+            color: white;
+        }
+        
+        nav h3 {
+            display: none;
+        }
+        /* Yehan tk */
+        /* second Div ka part */
+        
+        #center {
+            height: 65vh;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            border-bottom: 1px solid #0000003c;
+            padding-bottom: 2.5vw;
+        }
+        
+        #left h3 {
+            width: 25vw;
+            font-size: 1.8vw;
+            line-height: 2vw;
+        }
+        
+        #center h1 {
+            font-size: 10vw;
+            text-align: right;
+            line-height: 8vw;
+        }
+        /* Yehan tk */
+        /* First video part */
+        
+        #page1 video {
+            position: relative;
+            border-radius: 30px;
+            margin-top: 4vw;
+            width: 100%;
+            height: 80%;
+        }
+        /* orange walla jo ghum rha h video k piche*/
+        
+        #hero-shape {
+            position: absolute;
+            width: 46vw;
+            height: 36vw;
+            right: 0;
+            top: 71vh;
+        }
+        
+        #hero-1 {
+            background-color: #FE320A;
+            height: 100%;
+            width: 100%;
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+            filter: blur(20px);
+            position: absolute;
+        }
+        
+        #hero-2 {
+            background: linear-gradient(#FE320A, #Fe3f0a);
+            height: 30vw;
+            width: 30vw;
+            border-radius: 50%;
+            position: absolute;
+            animation-name: anime2;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            filter: blur(25px);
+        }
+        
+        #hero-3 {
+            background: linear-gradient(#FE320A, #fe3f0a);
+            height: 30vw;
+            position: absolute;
+            width: 30vw;
+            border-radius: 50%;
+            filter: blur(25px);
+            animation-name: anime1;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        
+        @keyframes anime1 {
+            from {
+                transform: translate(55%, -3%);
+            }
+            to {
+                transform: translate(0%, 10%);
+            }
+        }
+        
+        @keyframes anime2 {
+            from {
+                transform: translate(5%, -5%);
+            }
+            to {
+                transform: translate(-20%, 30%);
+            }
+        }
+        /* eehan tak */
+        /* moving text */
+        
+        #page2 {
+            min-height: 100vh;
+            width: 100%;
+            padding: 4vw;
+            position: relative;
+            background-color: #efeae3;
+        }
+        
+        #moving-text {
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        
+        #moving-text::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .con {
+            white-space: nowrap;
+            display: inline-block;
+            animation-name: move;
+            animation-duration: 8s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        
+        #moving-text h1 {
+            font-size: 6vw;
+            display: inline-block;
+        }
+        
+        #dot {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: #FE320A;
+            display: inline-block;
+            margin: 1vw 2vw;
+        }
+        
+        @keyframes move {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        /* EEhan tak */
+        
+        #page2-bottom {
+            height: 80vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 9;
+        }
+        
+        #page2-bottom h1 {
+            font-size: 3vw;
+            width: 50%;
+            line-height: 4vw;
+            /* height: 58vh; ye nhi h real mai */
+        }
+        
+        #bottom-part2 {
+            width: 28%;
+            height: 10vh;
+        }
+        
+        #bottom-part2 img {
+            width: 100%;
+            border-radius: 15px;
+        }
+        
+        #bottom-part2 p {
+            font-family: lightNueue;
+            font-weight: 100;
+            margin-top: 1vw;
+            font-size: 1.2vw;
+        }
+        /* Div k piche jo Orangish colour ka move krte rehta h */
+        
+        #page2 #gooey {
+            position: absolute;
+            width: 26vw;
+            height: 26vw;
+            border-radius: 50%;
+            background: linear-gradient(to top right, #FE320A, #fe800a);
+            top: 44%;
+            left: 25%;
+            filter: blur(20px);
+            animation-name: gooey;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+        }
+        
+        @keyframes gooey {
+            from {
+                transform: translate(10%, -12%) skew(0);
+            }
+            to {
+                transform: translate(-10%, 8%) skew(-10deg);
+            }
+        }
+        /* ........... */
+        /* list jisme cursor lejane pr pic show hota h */
+        
+        #page3 {
+            min-height: 100vh;
+            width: 100%;
+            padding: 4vw;
+            background-color: #efeae3;
+        }
+        
+        .elem {
+            height: 100px;
+            width: 100%;
+            border-bottom: 1px solid #96909049;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 2vw;
+        }
+        
+        .elem h2 {
+            font-size: 3vw;
+            position: relative;
+            z-index: 9;
+            color: #000;
+        }
+        
+        .elem .overlay {
+            height: 100%;
+            width: 100%;
+            background-color: #fea90a;
+            position: absolute;
+            left: 0;
+            top: -100%;
+            transition: all ease 0.8s;
+        }
+        
+        .elem:hover .overlay {
+            top: 0;
+        }
+        /* wo jo picture bich mai aa rha h mouse le jaane pr */
+        
+        #fixed-image {
+            height: 30vw;
+            width: 24vw;
+            border-radius: 15px;
+            position: fixed;
+            z-index: 92;
+            left: 44%;
+            top: 25%;
+            display: none;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        button {
+            min-height: 40px;
+            min-width: 120px;
+            border-radius: 12px;
+            margin: 28px 20px 0px;
+            border-color: #96909049;
+            cursor: pointer;
+        }
+        /* ....... */
+        /*..|dekh|....*/
+        
+        #page4 {
+            height: 80vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #000;
+            color: white;
+        }
+        
+        #page4-part1 {
+            width: 55%;
+            position: relative;
+        }
+        
+        #page4-part1 h2 {
+            font-size: 5vw;
+            color: #96909049;
+            display: flex;
+            margin-left: 6%;
+        }
+        
+        #page4-part1 h2::before {
+            content: '';
+            display: block;
+            width: 3px;
+            height: 8vh;
+            background-color: #FE320A;
+            position: absolute;
+            left: 40px;
+            top: 2vh;
+        }
+        
+        #page4-part1 p {
+            font-family: lightNueue;
+            font-weight: 100;
+            margin-top: 1vw;
+            font-size: 1.2vw;
+            margin-left: 6%;
+        }
+        
+        #page4-part1 p::before {
+            content: '';
+            display: block;
+            width: 3px;
+            height: 24vh;
+            background-color: #EFEAE3;
+            position: absolute;
+            left: 40px;
+            top: 10vh;
+        }
+        
+        #page4-part2 {
+            width: 40%
+        }
+        
+        #page4-part2 img {
+            height: 60vh;
+            width: 90%;
+        }
+        /* .......... */
+        /* swiper nhi ho rha */
+        
+        #page5 {
+            height: 70vh;
+            width: 100%;
+            background-color: #efeae3;
+            padding: 4vw;
+            position: relative;
+        }
+        
+        .swiper {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            justify-content: flex-start;
+        }
+        
+        .swiper-slide {
+            width: 40%;
+            border-left: 1px solid #96909049;
+            padding-left: 5px;
+        }
+        
+        .swiper-slide p {
+            font-family: lightNueue;
+            font-weight: 100;
+            margin-top: 1vw;
+            font-size: 1.2vw;
+        }
+        /* .......... */
+        /* footer page iske bina show nhi hoga isilye ek khali div bnaya gya */
+        
+        #page6 {
+            height: 100vh;
+            width: 100%;
+            /* position: relative; */
+        }
+        /* ......footer..... */
+        
+        #footer {
+            position: fixed;
+            height: 98vh;
+            width: 100%;
+            background-color: #f54b1ce7;
+            color: #dfdad9;
+            z-index: 9;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-direction: column;
+            text-align: left;
+        }
+        
+        #footer h1 {
+            font-size: 22vw;
+        }
+        
+        #footer-div {
+            padding: 0 4vw 0 6vw;
+            height: 18vh;
+            width: 100%;
+            display: flex;
+        }
+        
+        #footer-divL {
+            width: 90%;
+        }
+        
+        #footer-divR {
+            text-align: right;
+            font-size: 1.2vw;
+            font-weight: 100;
+        }
+        
+        #footer-bottom {
+            border-top: 1px solid white;
+            border-Bottom: 1px solid white;
+            height: 10vh;
+            width: 100%;
+            display: flex;
+            gap: 14vw;
+            align-items: center;
+            justify-content: center;
+            font-family: lightNueue;
+            font-weight: 100;
+            font-size: 1.2vw;
+        }
+        
+        #moving {
+            position: absolute;
+            width: 26vw;
+            height: 26vw;
+            border-radius: 50%;
+            background: linear-gradient(to top right, #FE320A, #fe800a);
+            top: 44%;
+            left: 25%;
+            filter: blur(20px);
+            animation-name: gooey;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+        }
+        /*
+        
+        #move-1 {
+            background-color: #dfdad9;
+            height: 100%;
+            width: 100%;
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+            filter: blur(20px);
+            position: absolute;
+        }
+        
+        #move-2 {
+            background: linear-gradient(#eee9e8, #f5f1f0);
+            height: 30vw;
+            width: 30vw;
+            border-radius: 50%;
+            position: absolute;
+            animation-name: anime2;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            filter: blur(25px);
+        }
+        
+        #move-3 {
+            background: linear-gradient(#f1e1dd, #f1ebea);
+            height: 30vw;
+            position: absolute;
+            width: 30vw;
+            border-radius: 50%;
+            filter: blur(25px);
+            animation-name: anime1;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        } */
+        
+        @keyframes anime1 {
+            from {
+                transform: translate(55%, -3%);
+            }
+            to {
+                transform: translate(0%, 10%);
+            }
+        }
+        
+        @keyframes anime2 {
+            from {
+                transform: translate(5%, -5%);
+            }
+            to {
+                transform: translate(-20%, 30%);
+            }
+        }
+        
+        #full-scr {
+            height: 100vh;
+            width: 100%;
+            background-color: #00000070;
+            position: fixed;
+            z-index: 99;
+            top: -100%;
+            transition: all ease 0.5s;
+        }
+        
+        #full-div1 {
+            height: 50%;
+            width: 100%;
+            background-color: #EFEAE3;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        /* ........ */
+        /* responsive ki baari */
+        
+        @media (max-width:600px) {
+            #page1 {
+                min-height: 100vh;
+                width: 100vw;
+                padding: 0 0vw;
+            }
+            nav {
+                padding: 8vw 5vw;
+                background-color: #EFEAE3;
+            }
+            nav img {
+                transition: all ease 0.8s;
+                height: 9vh;
+            }
+            #nav-part2 {
+                display: none;
+            }
+            nav h3 {
+                display: block;
+                padding: 3vw 5vw;
+                border: 1px solid #000;
+                border-radius: 50px;
+                font-size: 4vw;
+                font-weight: 200;
+                padding-left: 10vw;
+            }
+            #center {
+                height: 62vh;
+                width: 100%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                border-bottom: 1px solid #0000003c;
+                padding: 7vw 5vw;
+                padding-bottom: 10vw;
+                flex-direction: column-reverse;
+                position: relative;
+                z-index: 9;
+            }
+            #left h3 {
+                width: 80%;
+                font-size: 5.5vw;
+                line-height: 6vw;
+            }
+            #center h1 {
+                font-size: 17vw;
+                text-align: right;
+                line-height: 15vw;
+            }
+            #page1 video {
+                position: relative;
+                border-radius: 15px;
+                margin-top: 4vw;
+                height: 70vh;
+                object-fit: cover;
+                object-position: center;
+                width: 90%;
+                margin-left: 5%;
+            }
+            #page2 {
+                min-height: 100vh;
+                width: 100%;
+                padding: 4vw;
+                position: relative;
+                background-color: #efeae3;
+            }
+            #moving-text {
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            #moving-text::-webkit-scrollbar {
+                display: none;
+            }
+            .con {
+                white-space: nowrap;
+                display: inline-block;
+                animation-name: move;
+                animation-duration: 8s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+            #moving-text h1 {
+                font-size: 15vw;
+                display: inline-block;
+            }
+            #dot {
+                height: 25px;
+                width: 25px;
+                border-radius: 50%;
+                background-color: #FE320A;
+                display: inline-block;
+                margin: 2vw 2vw;
+            }
+            #page2-bottom {
+                height: 90vh;
+                width: 100%;
+                padding: 10vw 4vw;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+            #page2-bottom h1 {
+                font-size: 8.2vw;
+                width: 100%;
+                line-height: 8vw;
+                /* height: 58vh; ye nhi h real mai */
+            }
+            #bottom-part2 {
+                width: 95%;
+            }
+            #bottom-part2 img {
+                width: 100%;
+                border-radius: 10px;
+                margin-top: -29vh;
+            }
+            #bottom-part2 p {
+                margin-top: 0vw;
+                font-size: 4vw;
+            }
+            /* Div k piche jo Orangish colour ka move krte rehta h */
+            #page2 #gooey {
+                width: 62vw;
+                height: 62vw;
+                border-radius: 50%;
+                top: 32%;
+            }
+            #page3 {
+                min-height: 78vh;
+                width: 100%;
+                padding: 4vw;
+                background-color: #efeae3;
+            }
+            .elem {
+                height: 9vh
+            }
+            #fixed-image {
+                height: 40vw;
+                width: 28vw;
+            }
+            button {
+                min-height: 40px;
+                min-width: 96px;
+                margin: 12px 7px 0px;
+            }
+            #page4 {
+                min-height: 78vh;
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 4vh 2vh;
+            }
+            #page4-part1 {
+                width: 90%;
+            }
+            #page4-part1 h2 {
+                font-size: 10vw;
+            }
+            #page4-part1 h2::before {
+                display: none;
+            }
+            #page4-part1 p {
+                font-size: 4vw;
+            }
+            #page4-part1 p::before {
+                display: none;
+            }
+            #page4-part2 {
+                min-width: 90%
+            }
+            #page4-part2 img {
+                height: 28vh;
+                /* object-fit: cover; */
+                width: 50vh;
+                padding-left: 2vh;
+                padding-right: 2vh;
+                border-radius: 4vh
+            }
+            #page5 {
+                height: 38vh;
+            }
+            .swiper-slide p {
+                font-weight: 100;
+                margin-top: 0vw;
+                font-size: 4vw
+            }
+            #page6 {
+                height: 84vh;
+            }
+            #footer {
+                height: 100vh;
+                width: 100%;
+            }
+            #footer h1 {
+                height: 36vh;
+                font-size: 22vw;
+            }
+            #footer-div {
+                height: 50vh;
+            }
+            #footer-divL {
+                margin-top: 20vh;
+            }
+            #footer-divL h3 {
+                font-size: 8vw;
+            }
+            #footer-divR {
+                margin-top: 20vh;
+            }
+            #footer-divR h3 {
+                font-size: 3vw;
+            }
+            #footer-bottom {
+                border-top: none;
+                height: 20vh;
+                gap: 1vh;
+                align-items: center;
+                font-size: 3vw;
+                flex-direction: column;
+                margin-left: 6vh;
+            }
+            #moving {
+                display: none;
+            }
+            #full-div1 {
+                font-size: 10vw;
+                height: 30%;
+                width: 100%;
+                margin-top: 18vh;
+                text-align: right;
+            }
+        }
+        
+        #loader {
+            height: 100%;
+            width: 100%;
+            background-color: #000;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            transition: all ease 0.7s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #loader h1 {
+            font-size: 4vw;
+            color: transparent;
+            background: linear-gradient(to right, orange, orangered);
+            -webkit-background-clip: text;
+            position: absolute;
+            opacity: 0;
+            animation-name: load;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-timing-function: linear;
+        }
+        
+        #loader h1:nth-child(2) {
+            animation-delay: 2s;
+        }
+        
+        #loader h1:nth-child(3) {
+            animation-delay: 3s;
+        }
+        
+        @keyframes load {
+            0% {
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        @media(max-width:600px) {
+            #loader h1 {
+                font-size: 10vw;
+            }
+        }
